@@ -91,13 +91,19 @@ For local development, use `tsx` to run TypeScript directly:
 
 ## Demo Credentials
 
-Mews provides shared demo properties for development. Copy `.env.example` to `.env` — it includes working demo tokens for the **Net Pricing** test property.
+Mews provides shared demo properties for development. Copy `.env.example` to `.env` — it includes the public demo tokens for the **Net Pricing** test property, and points `MEWS_PLATFORM_URL` at the demo environment, `https://api.mews-demo.com`. Demo tokens don't work against `https://api.mews.com`, and real tokens don't work against the demo environment.
 
 ```bash
 cp .env.example .env
 ```
 
-> **Note**: Demo tokens are shared across all developers and subject to rate limits. If you get `429` responses, try the Gross Pricing demo property or wait a few minutes. See [Mews demo environments](https://docs.mews.com/connector-api/guidelines/environments) for all available test properties.
+`npm run test:smoke` uses the same demo tokens and demo URL by default.
+
+> **Note**: Demo tokens are shared across all developers and subject to rate limits. If you get `429` responses, try the Gross Pricing demo property or wait a few minutes. Mews rotates the demo tokens now and then; if you get `401` responses, take the current ones from [Mews demo environments](https://docs.mews.com/connector-api/guidelines/environments), which lists all available test properties.
+
+### Keeping real tokens safe
+
+The demo tokens above are public, published by Mews. A real property's `ClientToken` and `AccessToken` are secrets: keep them in your MCP client's `env` settings or in your local `.env` (which `.gitignore` excludes), and never commit them or paste them into issues.
 
 ## Authentication
 
