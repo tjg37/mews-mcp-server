@@ -1,13 +1,13 @@
 import { createMewsClient } from "../src/mews-client.js";
 
 const mews = createMewsClient({
-  platformUrl: process.env.MEWS_PLATFORM_URL || "https://api.mews.com",
+  platformUrl: process.env.MEWS_PLATFORM_URL || "https://api.mews-demo.com",
   clientToken:
     process.env.MEWS_CLIENT_TOKEN ||
     "E0D439EE522F44368DC78E1BFB03710C-D24FB11DBE31D4621C4817E028D9E1D",
   accessToken:
     process.env.MEWS_ACCESS_TOKEN ||
-    "7059D2C25BF64EA681ACAB3A00B859CC-D91BFF2B1E3047A3E0DEC1D57BE1382",
+    "4D6C7ABE0E6A4681B0AFB16900AE5D86-DF50CBC89E1D4FF5859DDF021649ED5",
   clientName: process.env.MEWS_CLIENT_NAME || "MewsMCP/1.0.0",
 });
 

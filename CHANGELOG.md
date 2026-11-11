@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Demo setup: `.env.example` and the smoke test now use Mews's current Net Pricing demo access token (the old one returns `401`) and the demo environment, `https://api.mews-demo.com`, which the demo tokens require.
+
 ## [0.1.0] - 2026-XX-XX
 
 ### Added
